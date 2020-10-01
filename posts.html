@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="posts.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Esposto</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="posts.html">Posts</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="create.html">Create</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <button class="btn btn-danger navbar-btn" id="logout-btn"onClick="window.location='index.html';" value="click here">
+            Logout
+          </button>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main">
+      <!-- JUMBOTRON -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3 pt-4">Esposto posts database</h1>
+          <p>
+            This database is made to store posts for the website. 
+            Every post must:</p>
+            <ul>
+              <li>Section separation</li>
+              <li>500-700 words</li>
+              <li>Not be asultive</li>
+              <li>Something that has not been written before on the blog</li>
+            </ul>
+
+          </p>
+          <p>
+            <a class="btn btn-primary btn-lg" href="http://www.esposto.ml/?i=2" role="button"
+              >Read more posts &raquo;</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row" id="posts-collection"></div>
+
+        <hr />
+      </div>
+    </main>
+
+    <script src="config-firebase.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="posts.js"></script>
+  </body>
+</html>

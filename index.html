@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+    <body>
+
+      <title>Login/Registration Form</title>
+      <div class="heading-tag">
+        <h1>Wellcome to blog post database.</h1>
+      </div>
+
+      <div class="container">
+        
+        <button id="login-btn" class="login-btn">Log In</button>
+        <!-- The Modal -->
+        <div id="login-modal" class="login-modal">
+          <!-- Modal content -->
+          <div class="login-modal-content animate">
+            <span class="close-login-modal">&times;</span>
+            <form class="login-container" id="login-form">
+              <label for="email"><b>Email</b></label>
+              <input
+                id="login-email"
+                type="text"
+                placeholder="Email"
+                name="email"
+                required
+              />
+              <br>
+
+              <label for="psw"><b>Password</b></label>
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                id="login-password"
+                autocomplete="on"
+                required
+              />
+
+              <button
+                type="submit"
+                id="btnLogin"
+                onClick="location.href='posts.html'"
+                value="click here"
+                class="login-btn-modal"
+              >
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <button id="registration-btn" class="registration-btn">
+          Registration
+        </button>
+        <!-- The Modal -->
+        <div id="registration-modal" class="registration-modal">
+          <!-- Modal content -->
+          <div class="registration-modal-content animate">
+            <span class="close-registration-modal">&times;</span>
+            <form class="registration-container" id="signup-form">
+              <label for="email"><b>Email</b></label>
+              <input
+                type="text"
+                placeholder="Enter Email"
+                name="email"
+                id="signup-email"
+                required
+              />
+
+              <label for="password"><b>Password</b></label>
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                id="signup-password"
+                autocomplete="on"
+                required
+              />
+
+              <button type="submit" class="registrate" id="btnSignup" >
+                Sign Up
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <script src="main.js"></script>
+
+      <script src="config-firebase.js"></script>
+
+      <script src="auth.js"></script>
+    </body>
+  </head>
+</html>
